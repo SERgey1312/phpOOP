@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
- class Employes {
+ abstract class Employes {
 
 	private $firstName;
 	private $lastName;
@@ -13,6 +13,8 @@ declare(strict_types=1);
 		$this->lastName = $lastName;
 		$this->middleName = $middleName;
 	}
+
+	abstract public function getSalary() : int;
 
 	public function getFullName() : string {
 		return $this->lastName . ' ' . $this->firstName . ' ' . $this->middleName;

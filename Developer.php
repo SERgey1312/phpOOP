@@ -1,9 +1,12 @@
 <?php
 
 declare(strict_types=1);
+spl_autoload_register(function ($class) {
+	include './' . $class . '.php';
+});
 
 class Developer extends Employes implements SalaryCounter {
-	const WORK = Developer::class;
+	private const WORK = Developer::class;
 	private $cost;
 	private $rank;
 

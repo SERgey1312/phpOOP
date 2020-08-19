@@ -1,10 +1,13 @@
 <?php
 
 declare(strict_types=1);
+spl_autoload_register(function ($class) {
+	include './' . $class . '.php';
+});
 
 class LayoutDesigner extends Employes implements SalaryCounter {
 
-	const WORK = LayoutDesigner::class;
+	private const WORK = LayoutDesigner::class;
 	private $cost;
 
 	public function __construct(string $firstName, string $lastName, string $middleName) {

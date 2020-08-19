@@ -1,9 +1,9 @@
 <?php
 
 declare(strict_types=1);
-include 'Designer.php';
-include 'Developer.php';
-include 'LayoutDesigner.php';
+spl_autoload_register(function ($class) {
+	include './' . $class . '.php';
+});
 
 class ProjectX {
 	const PROJECT_NAME = ProjectX::class;
@@ -39,6 +39,10 @@ class ProjectX {
 
 	public function getPrice() : int{
 		return $this->price;
+	}
+
+	public function getEmployes() : array {
+		return $this->employes;
 	}
 
 }
