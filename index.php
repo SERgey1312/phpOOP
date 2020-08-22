@@ -8,7 +8,7 @@ try{
 	foreach($projectX->getEmployes() as $key){
 		echo $key->getInfo() . "<br>";
 	}
-	echo 'Total cost of the project: '.$projectX->getPrice();
+	echo '<b>'.'Total cost of the project: '.$projectX->getPrice() . '</b>';
 } catch(Exception $e){
 	echo 'Exception : ' . $e->getMessage();
 }

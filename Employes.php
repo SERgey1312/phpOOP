@@ -15,6 +15,7 @@ declare(strict_types=1);
 	}
 
 	abstract public function getSalary() : int;
+	abstract public function getInfo() : string;
 
 	public function getFullName() : string {
 		return $this->lastName . ' ' . $this->firstName . ' ' . $this->middleName;
